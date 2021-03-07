@@ -1,0 +1,51 @@
+.collection.section {
+    padding: 0;
+    .container {
+        padding: 0;
+        max-width: 100%;
+        .c-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            position: relative;
+            .img-wrapper {
+                img {
+                    max-width: 100%;
+                }
+            }
+            .details-wrapper {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                padding: 2rem;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 50%;
+                background: white;
+                overflow: hidden;
+                transition: 1s all ease-in-out;
+                &.initial {
+                    width: 0;
+                    padding: 2rem 0 2rem 0;
+                    .details {
+                        opacity: 0;
+                        color: red;
+                    }
+                }
+
+                .details {
+                    max-width: 320px;
+                    .reg_link {
+                        color: #2E5866;
+                    }
+                }
+            }
+            
+        }
+        .c-grid.initial {
+            grid-template-columns: 1fr;
+        }
+    }
+}
